@@ -1,0 +1,22 @@
+{
+  "name": "jukebot",
+  "version": "1.0.0",
+  "description": "On demand music bot for slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "spotify"
+  ],
+  "author": "Marcos Ocon (oconmarcos97@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1"
+  }
+}
