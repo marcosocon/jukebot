@@ -18,16 +18,24 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
+  var song = req.body.text;  
+
   // TODO: si es play solo que haga play, si tiene texto despues que busque ese texto de despues osea /jkb play easy lover, manda spotify play easy lover :)
   if(req.body.text === 'play') {
     exec('spotify play');
+  } else {
+    exec('spotify ' + song);
   }
   // esto queda igual, el stop se mantiene
   if(req.body.text === 'stop') {
     exec('spotify stop');
   }
+
+   if(req.body.text !== 'play' || req.body.text !== 'stop') {
+     exec('spotify ' + song);
+   }
   // TODO: envia un mensaje para que aparezca :)
-  res.send('null');
+  res.send('gracias por usar jukebox :3');
 });
 
 
